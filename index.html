@@ -87,7 +87,7 @@
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3>模拟仿真</h3>
-              <p class="lead mb-0">AURORA SYSTEM为电子产品的设计人员提供从芯片、封装到电路板的全系统仿真分析验证服务，包括芯片封装的三维电磁模型提取，版图布线的宽频全波模拟，高速信号的仿真和规范验证及电源信号的阻抗噪声仿真分析。</p>
+              <p class="lead mb-0">AURORA SYSTEM为电子产品的设计人员提供从芯片、封装到电路板的全系统仿真分析验证服务，包括芯片封装的三维电磁模型提取，电路板布线的宽频全波模拟，高速信号的仿真和规范验证及电源信号的阻抗噪声仿真分析。</p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -121,7 +121,7 @@
             <div class="col-lg-6 my-auto order-lg-2 showcase-text">
                 <h2>信号完整性仿真分析</h2>
                 <p class="lead mb-0">为了保证信号在系统中正常工作，信号必须以符合规范要求的时序和电压幅度到达接收器件。对有高速信号的系统， 设计人员必须进行建模仿真来优化设计使得信号的传输符合设计规范。
-                  <br>AURORA SYSTEM仿真验证服务包括：眼图的产生，波形完整性分析（上冲、下冲和振铃），时序完整性分析（建立时间、保持时间和时钟抖动等）。高速信号类型包括：DDR3、DDR4、Flash、SerDes（PCIe、USB、HDMI）等。</p>
+                  <br>AURORA SYSTEM仿真验证服务包括：眼图的产生，波形完整性分析（上冲、下冲和振铃），时序完整性分析（建立时间、保持时间和抖动等）。高速信号类型包括：DDR3、DDR4、Flash、SerDes（PCIe、USB、HDMI）等。</p>
               </div>
           <div class="col-lg-6 order-lg-1 text-white showcase-img">
             <img src="img/bg-showcase-1.png" style="height:auto;width:100%" ></div>
@@ -153,7 +153,7 @@
         <h2 class="mb-5">客户案例</h2>
         <div class="row">
           <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0" data-toggle="modal" data-target="#myModal">
               <img class="img-fluid mb-3" src="img/testimonials-1.png" alt="">
               <h5>智慧交通DDR信号完整性案例</h5>
               <p class="font-weight-light mb-0 text-left">仿真验证服务包括DDR仿真环境的建立，IBIS模型的选择，传输线建模和整通道的电路模拟。<br>仿真报告的内容包括信号线的特征阻抗计算，DQ和ADDR的时序模拟，DQS和CLK的波形图，DDR信号的串扰分析及眼图。</p>
@@ -206,11 +206,11 @@
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
             <ul class="list-inline mb-2">
               <li class="list-inline-item">
-                <a href="#">关于我们</a>
+                <a href="./about.html">关于我们</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
-                <a href="#">联系我们</a>
+                <a href="./contact.html">联系我们</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
@@ -245,7 +245,35 @@
         </div>
       </div>
     </footer>
-
+  <!-- Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+   
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">模态框头部</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <br>
+          <button id="prev">Previous</button>
+          <button id="next">Next</button>
+          &nbsp; &nbsp;
+          <span>Page: <span id="page_num"></span> / <span id="page_count"></span>
+        </div>
+   
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <canvas id="the-canvas"></canvas>
+        </div>
+   
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+   
+      </div>
+    </div>
+  </div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -254,6 +282,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/demo.min.js"></script>
+    <!-- PDFJS -->
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="js/pdf.js"></script>
   </body>
 
 </html>
